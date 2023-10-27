@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fleurs</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- FontAwesome 6.1.1 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div>
+      <div>
+        <nav class="navbar navbar-expand-lg fixed-top text-white" id="navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand px-4" href="#">
+              <img src="./img/logoBlanco.svg" alt="Bootstrap" width="80" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item px-3">
+                  <a
+                    class="nav-link active text-white"
+                    aria-current="page"
+                    href="catalogo.html"
+                  >
+                    Primavera</a
+                  >
+                </li>
+                <li class="nav-item px-3">
+                  <a
+                    class="nav-link active text-white"
+                    aria-current="page"
+                    href="#"
+                    >Verano</a
+                  >
+                </li>
+                <li class="nav-item px-3">
+                  <a
+                    class="nav-link active text-white"
+                    aria-current="page"
+                    href="#"
+                    >Otoño</a
+                  >
+                </li>
+                <li class="nav-item px-3">
+                  <a
+                    class="nav-link active text-white"
+                    aria-current="page"
+                    href="#"
+                    >Invierno</a
+                  >
+                </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <!-- Mueve estos botones al final usando "ml-auto" -->
+                <li class="nav-item px-3">
+                  <button
+                    type="button text-white"
+                    class="btn btn-outline-light"
+                    id="abrirModalLogin"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Login"
+                  >
+                    Iniciar Sesión
+                  </button>
+                </li>
+                <li class="nav-item px-3">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light"
+                    id="abrirModalRegister"
+                    data-bs-toggle="modal"
+                    data-bs-target="#Register"
+                  >
+                    ¡Regístrate!
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div
+          class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
+        >
+          <div class="container">
+            <div class="row py-5">
+              <div
+                class="col-md-12 col-sm-auto d-flex justify-content-center align-content-center text-white text-center"
+              >
+                <div>
+                  <img src="./img/logoBlanco.svg" alt="" width="25%" />
+                  <div class="py-5">
+                    <h1 class="py-2">Fleurs te da la Bienvenida</h1>
+
+                    <p class="pb-5">
+                      En Fleurs, no solo vendemos flores; creamos experiencias
+                      que inspiran y deleitan los sentidos. Nuestra florería
+                      exclusiva es el lugar donde la belleza natural se
+                      encuentra con la elegancia, donde cada pétalo es una obra
+                      de arte y cada ramo es una historia que contar.
+                    </p>
+
+                    <a href="#"
+                      ><button type="button" class="btn btn-outline-light px-5">
+                        Explora más
+                      </button></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div
+        class="row justify-content-center align-content-center align-items-center pt-5"
+      >
+        <h1 class="text-center pb-4">
+          Descubre Nuestros Arreglos Florales Más Vendidos
+        </h1>
+        <p class="text-center px-5 pb-5">
+
+          Te invitamos a explorar nuestra colección de arreglos florales más
+          vendidos y descubrir el regalo perfecto para cualquier ocasión. En
+          Fleurs, la frescura y la belleza se combinan para crear experiencias
+          florales inolvidables.
+         
+          No importa si estás buscando el regalo ideal o deseas alegrar tu
+          propio día, nuestros arreglos florales más vendidos son una elección
+          infalible. ¿Por qué conformarte con lo común cuando puedes optar por
+          lo extraordinario? Descubre la magia de las flores en Fleurs y déjate
+          cautivar por la belleza de nuestros arreglos más populares.
+        </p>
+        <div class="owl-carousel owl-theme pt-3" style="width: 100%">
+          <!-- 1 -->
+          <div class="item">
+            <div class="card cardMercado">
+              <a href="detalleProp.html">
+                <div
+                  id="myCarousel"
+                  class="carousel slide carousel-fade"
+                  data-bs-ride="carousel"
+                >
+                  <!-- Imágenes del carrusel -->
+                  <div class="carousel">
+                    <div class="carousel-item active">
+                      <img src="./img/ramo1.png" class="d-block w-100" />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./img/ramo2.png"
+                        class="d-block w-100"
+                        alt="Imagen 2"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./img/ramo3.png"
+                        class="d-block w-100"
+                        alt="Imagen 3"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Controles del carrusel -->
+                  <a
+                    class="carousel-control-prev"
+                    href="#myCarousel"
+                    role="button"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#myCarousel"
+                    role="button"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </a>
+                </div>
+
+                <div class="card-body">
+                  <div class="row d-flex justify-content-between">
+                    <div
+                      class="col-6 d-flex align-items-center"
+                      style="font-weight: bold"
+                    >
+                      Seine Bight
+                    </div>
+                    <div
+                      class="col-6 d-flex justify-content-end align-items-center"
+                    >
+                      <i
+                        class="fas fa-solid fa-star"
+                        style="color: #8307bd"
+                      ></i>
+                      4.9 (102)
+                    </div>
+                  </div>
+                  <p>
+                    <i
+                      
+                      style="color: #000000"
+                    ></i>
+                    
+                  </p>
+                  <p class="card-text">
+                    <b>$60.00</b>
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="item">
+            <div class="card cardMercado">
+              <a href="detalleProp.html">
+                <div
+                  id="carousel1"
+                  class="carousel slide carousel-fade"
+                  data-bs-ride="carousel"
+                >
+                  <!-- Imágenes del carrusel -->
+                  <div class="carousel">
+                    <div class="carousel-item active">
+                      <img
+                        src="./img/ramo1.png"
+                        class="d-block w-100"
+                        alt="Imagen 1"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="/img/ramo2.png"
+                        class="d-block w-100"
+                        alt="Imagen 2"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Controles del carrusel -->
+                  <a
+                    class="carousel-control-prev"
+                    href="#carousel1"
+                    role="button"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#carousel1"
+                    role="button"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <div class="row d-flex justify-content-between">
+                    <div
+                      class="col-6 d-flex align-items-center"
+                      style="font-weight: bold"
+                    >
+                      Seine Bight
+                    </div>
+                    <div
+                      class="col-6 d-flex justify-content-end align-items-center"
+                    >
+                      <i
+                        class="fas fa-solid fa-star"
+                        style="color: #8307bd"
+                      ></i>
+                      4.9 (102)
+                    </div>
+                  </div>
+                  <p>
+                    <i
+                      
+                      style="color: #000000"
+                    ></i>
+                    
+                  </p>
+                  <p class="card-text">
+                    <b>$60.00</b>
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="item">
+            <div class="card cardMercado">
+              <a href="detalleProp.html">
+                <div
+                  id="carousel2"
+                  class="carousel slide carousel-fade"
+                  data-bs-ride="carousel"
+                >
+                  <!-- Imágenes del carrusel -->
+                  <div class="carousel">
+                    <div class="carousel-item active">
+                      <img
+                        src="./img/ramo1.png"
+                        class="d-block w-100"
+                        alt="Imagen 1"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./img/ramo2.png"
+                        class="d-block w-100"
+                        alt="Imagen 2"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Controles del carrusel -->
+                  <a
+                    class="carousel-control-prev"
+                    href="#carousel2"
+                    role="button"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#carousel2"
+                    role="button"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <div class="row d-flex justify-content-between">
+                    <div
+                      class="col-6 d-flex align-items-center"
+                      style="font-weight: bold"
+                    >
+                      Seine Bight
+                    </div>
+                    <div
+                      class="col-6 d-flex justify-content-end align-items-center"
+                    >
+                      <i
+                        class="fas fa-solid fa-star"
+                        style="color: #8307bd"
+                      ></i>
+                      4.9 (102)
+                    </div>
+                  </div>
+                  <p>
+                    <i
+                      
+                      style="color: #000000"
+                    ></i>
+                    
+                  </p>
+                  <p class="card-text">
+                    <b>$60.00</b>
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="item">
+            <div class="card cardMercado">
+              <a href="detalleProp.html">
+                <div
+                  id="carousel3"
+                  class="carousel slide carousel-fade"
+                  data-bs-ride="carousel"
+                >
+                  <!-- Imágenes del carrusel -->
+                  <div class="carousel">
+                    <div class="carousel-item active">
+                      <img
+                        src="./img/ramo1.png"
+                        class="d-block w-100"
+                        alt="Imagen 1"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./img/ramo2.png"
+                        class="d-block w-100"
+                        alt="Imagen 2"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Controles del carrusel -->
+                  <a
+                    class="carousel-control-prev"
+                    href="#carousel3"
+                    role="button"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#carousel3"
+                    role="button"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </a>
+                </div>
+
+                <div class="card-body">
+                  <div class="row d-flex justify-content-between">
+                    <div
+                      class="col-6 d-flex align-items-center"
+                      style="font-weight: bold"
+                    >
+                      Seine Bight
+                    </div>
+                    <div
+                      class="col-6 d-flex justify-content-end align-items-center"
+                    >
+                      <i
+                        class="fas fa-solid fa-star"
+                        style="color: #8307bd"
+                      ></i>
+                      4.9 (102)
+                    </div>
+                  </div>
+                  <p>
+                    <i
+                      
+                      style="color: #000000"
+                    ></i>
+                    
+                  </p>
+                  <p class="card-text">
+                    <b>$60.00</b>
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="item">
+            <div class="card cardMercado">
+              <a href="detalleProp.html">
+                <div
+                  id="carousel4"
+                  class="carousel slide carousel-fade"
+                  data-bs-ride="carousel"
+                >
+                  <!-- Imágenes del carrusel -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="./img/ramo1.png"
+                        class="d-block w-100"
+                        alt="Imagen 1"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="./img/ramo2.png"
+                        class="d-block w-100"
+                        alt="Imagen 2"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Controles del carrusel -->
+                  <a
+                    class="carousel-control-prev"
+                    href="#carousel4"
+                    role="button"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    href="#carousel4"
+                    role="button"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </a>
+                </div>
+
+                <div class="card-body">
+                  <div class="row d-flex justify-content-between">
+                    <div
+                      class="col-6 d-flex align-items-center"
+                      style="font-weight: bold"
+                    >
+                      Seine Bight
+                    </div>
+                    <div
+                      class="col-6 d-flex justify-content-end align-items-center"
+                    >
+                      <i
+                        class="fas fa-solid fa-star"
+                        style="color: #8307bd"
+                      ></i>
+                      4.9 (102)
+                    </div>
+                  </div>
+                  <p>
+                    <i
+                      
+                      style="color: #000000"
+                    ></i>
+                    
+                  </p>
+                  <p class="card-text">
+                    <b>$60.00</b>
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="js/navbar.js"></script>
+
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 4,
+          },
+          1000: {
+            items: 4,
+          },
+        },
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#abrirModalLogin").click(function () {
+          $("#modalContainer").load("login.html", function () {
+            $("#Login").modal("show");
+          });
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#abrirModalRegister").click(function () {
+          $("#modalContainer").load("register.html", function () {
+            $("#Register").modal("show");
+          });
+        });
+      });
+    </script>
+
+    <div id="modalContainer"></div>
+  </body>
+</html>
